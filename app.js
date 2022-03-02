@@ -31,14 +31,20 @@ const delayedColorChange = (color, delay) =>{
     })
 }
 
-delayedColorChange('#fbf8cc', 3000)
-    .then(() =>delayedColorChange('#fde4cf',3000))
-    .then(() =>delayedColorChange('#ffcfd2',3000))
-    .then(() =>delayedColorChange('#f1c0e8',3000))
-    .then(() =>delayedColorChange('#cfbaf0',3000))
-    .then(() =>delayedColorChange('#a3c4f3',3000))
-    .then(() =>delayedColorChange('#90dbf4',3000))
-    .then(() =>delayedColorChange('#8eecf5',3000))
-    .then(() =>delayedColorChange('#98f5e1',3000))
-    .then(() =>delayedColorChange('#b9fbc0',3000))
-    .then(() =>delayedColorChange('lightslategrey',3000))
+async function backgroundRainbow () {
+    await delayedColorChange('#fbf8cc', 2000);
+    await delayedColorChange('#fde4cf',3000);
+    await delayedColorChange('#ffcfd2',3000);
+    await delayedColorChange('#f1c0e8',3000);
+    await delayedColorChange('#cfbaf0',3000);
+    await delayedColorChange('#a3c4f3',3000);
+    await delayedColorChange('#90dbf4',3000);
+    await delayedColorChange('#8eecf5',3000);
+    await delayedColorChange('#98f5e1',3000);
+    await delayedColorChange('#b9fbc0',3000);
+    await delayedColorChange('lightslategrey',3000);
+}
+async function printRainbow () {
+    await backgroundRainbow();
+}
+printRainbow();
